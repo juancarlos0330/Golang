@@ -181,6 +181,24 @@ func operators() {
 	fmt.Println(z < y)
 }
 
+func conditioner() {
+	temperature := 14
+	if temperature > 15 {
+		fmt.Println("It is warm out there")
+	} else {
+		fmt.Println("It is cold out there")
+	}
+
+	time := 22
+	if time < 10 {
+		fmt.Println("Good morning.")
+	} else if time < 20 {
+		fmt.Println("Good day.")
+	} else {
+		fmt.Println("Good evening.")
+	}
+}
+
 func main() {
-	operators()
+	conditioner()
 }
