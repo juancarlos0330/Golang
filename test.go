@@ -120,6 +120,46 @@ func goArray() {
 	fmt.Println(len(arr4))
 }
 
+func goSlice() {
+	// myslice1 := []int{}
+	// fmt.Println(len(myslice1))
+	// fmt.Println(cap(myslice1))
+	// fmt.Println(myslice1)
+
+	// myslice2 := []string{"Go", "Slices", "Are", "Powerful"}
+	// fmt.Println(len(myslice2))
+	// fmt.Println(cap(myslice2))
+	// fmt.Println(myslice2)
+
+	myslice1 := make([]int, 5, 10)
+	fmt.Printf("myslice1 = %v\n", myslice1)
+	fmt.Printf("length = %d\n", len(myslice1))
+	fmt.Printf("capacity = %d\n", cap(myslice1))
+
+	// with omitted capacity
+	myslice2 := make([]int, 5)
+	fmt.Printf("myslice2 = %v\n", myslice2)
+	fmt.Printf("length = %d\n", len(myslice2))
+	fmt.Printf("capacity = %d\n", cap(myslice2))
+}
+
+func modify_slice() {
+	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+	// Original slice
+	fmt.Printf("numbers = %v\n", numbers)
+	fmt.Printf("length = %d\n", len(numbers))
+	fmt.Printf("capacity = %d\n", cap(numbers))
+
+	// Create copy with only needed numbers
+	neededNumbers := numbers[:]
+	numbersCopy := make([]int, len(neededNumbers))
+	copy(numbersCopy, neededNumbers)
+
+	fmt.Printf("numbersCopy = %v\n", numbersCopy)
+	fmt.Printf("length = %d\n", len(numbersCopy))
+	fmt.Printf("capacity = %d\n", cap(numbersCopy))
+}
+
 func main() {
-	goArray()
+	modify_slice()
 }
