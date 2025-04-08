@@ -23,6 +23,20 @@ func declaration() {
 	fmt.Println(c)
 }
 
+func multi_declaration() {
+	var (
+		a int
+		b int    = 1
+		c string = "hello"
+		d string
+	)
+
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+}
+
 func main() {
-	declaration()
+	multi_declaration()
 }
