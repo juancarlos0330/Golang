@@ -105,6 +105,21 @@ func data_types() {
 	fmt.Printf("Type: %T, value: %v\n", txt3, txt3)
 }
 
+func goArray() {
+	var arr1 = [5]int{1, 2, 3}
+	arr2 := [...]int{4, 5, 6, 7, 8}
+
+	arr2[4] = 50
+	fmt.Println(arr1)
+	fmt.Println(arr2)
+
+	arr3 := [4]string{"Volvo", "BMW", "Ford", "Mazda"}
+	arr4 := [...]int{1, 2, 3, 4, 5, 6}
+
+	fmt.Println(len(arr3))
+	fmt.Println(len(arr4))
+}
+
 func main() {
-	data_types()
+	goArray()
 }
