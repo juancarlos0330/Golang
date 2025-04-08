@@ -37,6 +37,35 @@ func multi_declaration() {
 	fmt.Println(d)
 }
 
+const PI = 3.14
+
+const (
+	A int = 1
+	B     = 3.14
+	C     = "Hi!"
+)
+
+func constant() {
+	fmt.Println(PI)
+	fmt.Println(A)
+	fmt.Println(B)
+	fmt.Println(C)
+}
+
+func formatting_verbs() {
+	var i = 15.5
+	var txt = "Hello World!"
+
+	fmt.Printf("%v\n", i)
+	fmt.Printf("%#v\n", i)
+	fmt.Printf("%v%%\n", i)
+	fmt.Printf("%T\n", i)
+
+	fmt.Printf("%v\n", txt)
+	fmt.Printf("%#v\n", txt)
+	fmt.Printf("%T\n", txt)
+}
+
 func main() {
-	multi_declaration()
+	formatting_verbs()
 }
