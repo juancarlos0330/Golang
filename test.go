@@ -160,6 +160,27 @@ func modify_slice() {
 	fmt.Printf("capacity = %d\n", cap(numbersCopy))
 }
 
+func operators() {
+	var a = 15 + 25
+	fmt.Println(a)
+
+	var (
+		sum1 = 100 + 50    // 150 (100 + 50)
+		sum2 = sum1 + 250  // 400 (150 + 250)
+		sum3 = sum2 + sum2 // 800 (400 + 400)
+	)
+	fmt.Println(sum3)
+	fmt.Println(10 * 5)
+
+	var x = 10
+	x += 5
+	fmt.Println(x)
+
+	var z = 5
+	var y = 3
+	fmt.Println(z < y)
+}
+
 func main() {
-	modify_slice()
+	operators()
 }
